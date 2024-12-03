@@ -11,6 +11,11 @@ class Command(BaseCommand):
         base_currency = "USD"
         currencies = ["EUR", "JPY", "PLN", "GBP", "AUD", "CAD", "CHF"]
 
+        Currency.objects.update_or_create(
+                code=base_currency,
+                defaults={"base_rate": 1.0},
+            )
+
         for code in currencies:
             try:
                 ticker = yf.Ticker(f"{code}{base_currency}=X")
