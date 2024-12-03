@@ -1,6 +1,4 @@
-# Zadanie rekrutacyjne
-
-## Basic Django application: Specification
+# Basic Django application: Specification
 
 We’d like you to build a REST API for us - a basic currency exchange database.
 Interacting with external API just to load initial data to the database. Here’s the full
